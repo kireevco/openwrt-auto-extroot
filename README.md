@@ -36,7 +36,7 @@ on a TP-Link WDR4300.
 
 # Building
 
-e.g. `./build.sh TLWDR4300`
+e.g. `./build.sh TLWDR4300` or `./build.sh TLWR842`
 
 Results will be under `build/OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64`.
 

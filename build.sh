@@ -46,6 +46,12 @@ if [ ! -e ${IMGBUILDERDIR} ]; then
     pushd ${BUILD}
     wget --continue ${IMGBUILDERURL}
     tar jvxf OpenWrt-ImageBuilder*.tar.bz2
+    printf "src/gz chaos_calmer_base http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/base
+src/gz chaos_calmer_luci http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/luci
+src/gz chaos_calmer_management http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/management
+src/gz chaos_calmer_packages http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/packages
+src/gz chaos_calmer_routing http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/routing
+src/gz chaos_calmer_telephony http://downloads.openwrt.org/snapshots/trunk/ar71xx/generic/packages/telephony" >> $IMGBUILDERDIR/repositories.conf
     popd
 fi
 

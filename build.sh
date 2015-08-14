@@ -26,7 +26,7 @@ BUILD=`dirname "$0"`"/build/"
 BUILD=`absolutize $BUILD`
 IMGTEMPDIR="${BUILD}/openwrt-build-image-extras"
 IMGBUILDERDIR="${BUILD}/OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64"
-IMGBUILDERURL="https://bintray.com/artifact/download/kireevco/generic/OpenWrt-ImageBuilder-14.07-ar71xx_generic-for-linux-x86_64.tar.bz2"
+IMGBUILDERURL="http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2"
 
 PREINSTALLED_PACKAGES="wireless-tools firewall iptables"
 PREINSTALLED_PACKAGES+=" ppp ppp-mod-pppoe ppp-mod-pppol2tp ppp-mod-pptp kmod-ppp kmod-pppoe"

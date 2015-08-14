@@ -53,7 +53,7 @@ src/gz barrier_breaker_oldpackages http://downloads.openwrt.org/barrier_breaker/
 src/gz barrier_breaker_packages http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/packages
 src/gz barrier_breaker_routing http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/routing
 src/gz barrier_breaker_telephony http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/telephony
-src imagebuilder file:packages" >> $IMGBUILDERDIR/repositories.conf
+src imagebuilder file:packages" > $IMGBUILDERDIR/repositories.conf
     popd
 fi
 

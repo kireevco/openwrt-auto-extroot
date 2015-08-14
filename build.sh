@@ -46,13 +46,13 @@ if [ ! -e ${IMGBUILDERDIR} ]; then
     pushd ${BUILD}
     wget --continue ${IMGBUILDERURL}
     tar jvxf OpenWrt-ImageBuilder*.tar.bz2 
-    printf "src/gz barrier_breaker_base http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/base
-src/gz barrier_breaker_luci http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/luci
-src/gz barrier_breaker_management http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/management
-src/gz barrier_breaker_oldpackages http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/oldpackages
-src/gz barrier_breaker_packages http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/packages
-src/gz barrier_breaker_routing http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/routing
-src/gz barrier_breaker_telephony http://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/packages/telephony" >> $IMGBUILDERDIR/repositories.conf
+    printf "src/gz barrier_breaker_base http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/base
+src/gz barrier_breaker_luci http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/luci
+src/gz barrier_breaker_management http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/management
+src/gz barrier_breaker_oldpackages http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/oldpackages
+src/gz barrier_breaker_packages http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/packages
+src/gz barrier_breaker_routing http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/routing
+src/gz barrier_breaker_telephony http://ec2-52-26-170-245.us-west-2.compute.amazonaws.com/ar71xx/generic/packages/telephony" >> $IMGBUILDERDIR/repositories.conf
     popd
 fi
 

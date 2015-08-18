@@ -45,12 +45,12 @@ n
 p
 1
 
-+64M
++512M
 n
 p
 2
 
-+512M
++1024M
 n
 p
 3
@@ -109,10 +109,10 @@ EOF
 
 autoprovisionStage1()
 {
-    signalAutoprovisionWorking
+    # signalAutoprovisionWorking
 
-    signalAutoprovisionWaitingForUser
-    signalWaitingForPendrive
+    # signalAutoprovisionWaitingForUser
+    # signalWaitingForPendrive
 
     until hasBigEnoughPendrive
     do
@@ -120,8 +120,8 @@ autoprovisionStage1()
         sleep 3
     done
 
-    signalAutoprovisionWorking # to make it flash in sync with the USB led
-    signalFormatting
+    # signalAutoprovisionWorking # to make it flash in sync with the USB led
+    # signalFormatting
 
     sleep 1
 
@@ -130,7 +130,7 @@ autoprovisionStage1()
     setupExtroot
 
     sync
-    stopSignallingAnything
+    # stopSignallingAnything
     reboot
 }
 

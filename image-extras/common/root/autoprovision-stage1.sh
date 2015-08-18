@@ -6,12 +6,12 @@
 
 getPendriveSize()
 {
-    # this is needed for the mmc card in some (all?) Huawei 3G dongle.
-    # details: https://dev.openwrt.org/ticket/10716#comment:4
-    if [ -e /dev/sda ]; then
-        # force re-read of the partition table
-        head /dev/sda >/dev/null
-    fi
+    # # this is needed for the mmc card in some (all?) Huawei 3G dongle.
+    # # details: https://dev.openwrt.org/ticket/10716#comment:4
+    # if [ -e /dev/sda ]; then
+    #     # force re-read of the partition table
+    #     head /dev/sda >/dev/null
+    # fi
 
     if (grep -q sda /proc/partitions) then
         cat /sys/block/sda/size

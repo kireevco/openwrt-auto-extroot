@@ -54,7 +54,8 @@ autoprovisionStage2()
         # please note that stage2 requires internet connection to install packages and you most probably want to log in
         # on the GUI to set up a WAN connection. but on the other hand you don't want to end up using a publically
         # available default password anywhere, therefore the random here...
-        setRootPassword ""
+        # setRootPassword ""
+        chmod 0600 /etc/dropbear/authorized_keys
 
         installPackages
 

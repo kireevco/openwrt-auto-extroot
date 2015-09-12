@@ -9,6 +9,8 @@ PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 rootUUID=05d615b3-bef8-460c-9a23-52db8d09e000
 dataUUID=05d615b3-bef8-460c-9a23-52db8d09e001
 swapUUID=05d615b3-bef8-460c-9a23-52db8d09e002
+varUUID=05d615b3-bef8-460c-9a23-52db8d09e003
+
 
 if [ -f /lib/ar71xx.sh ]; then
     . /lib/ar71xx.sh

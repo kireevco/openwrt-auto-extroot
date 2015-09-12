@@ -36,8 +36,8 @@ setupPendrivePartitions()
     # erase partition table
     dd if=/dev/zero of=/dev/sda bs=1M count=1
 
-    # sda1 is 'swap'
-    # sda2 is 'root'
+    # sda1 is 'root'
+    # sda2 is 'swap'    
     # sda3 is 'data'
     fdisk /dev/sda <<EOF
 o
@@ -45,20 +45,15 @@ n
 p
 1
 
-+128M
++1024M
 n
 p
 2
 
-+1024M
++128M
 n
 p
-3
 
-+1024M
-n
-p
-4
 
 t
 1
@@ -75,11 +70,11 @@ EOF
         echo "Waiting for partitions to show up in /dev"
         sleep 1
     done
-
-    mkswap -L swap -U $swapUUID /dev/sda1
-    mkfs.ext4 -L root -U $rootUUID /dev/sda2
+    
+    mkfs.ext4 -L root -U $rootUUID /dev/sda1
+    mkswap -L swap -U $swapUUID /dev/sda2    
     mkfs.ext4 -L data -U $dataUUID /dev/sda3
-    mkfs.ext4 -L var -U $varUUID /dev/sda4
+    
 
     log "Finished setting up filesystems"
 }
